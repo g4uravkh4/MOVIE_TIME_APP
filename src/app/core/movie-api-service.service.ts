@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +11,15 @@ export class MovieApiServiceService {
 
   constructor(private http: HttpClient) {}
 
-  bannerApiData() {
+  bannerApiData(): Observable<any> {
     return this.http.get(
-      `${this.baseurl}/trending/all/week?api_key=${this.apikey}`
+      `${this.baseurl}/trending/all/day?api_key=${this.apikey}`
+    );
+  }
+
+  trendingMovieApiData(): Observable<any> {
+    return this.http.get(
+      `${this.baseurl}/trending/movie/day?api_key=${this.apikey}`
     );
   }
 }
