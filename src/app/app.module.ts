@@ -9,6 +9,7 @@ import { SearchComponent } from './features/search/search.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieApiServiceService } from './core/movie-api-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,12 @@ import { MovieApiServiceService } from './core/movie-api-service.service';
     SearchComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [MovieApiServiceService],
   bootstrap: [AppComponent],
 })
