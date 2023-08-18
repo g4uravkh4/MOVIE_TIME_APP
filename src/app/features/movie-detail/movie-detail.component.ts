@@ -34,7 +34,6 @@ export class MovieDetailComponent implements OnInit {
 
   getVideo(id: any) {
     this.service.getMovieVideo(id).subscribe((data) => {
-      console.log(data, 'video#');
       data.results.forEach((element: any) => {
         if (element.type == 'Trailer') {
           this.getMovieVideoResult = element.key;
