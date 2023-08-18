@@ -11,6 +11,12 @@ button:hover{
 
 img{
     width: 100%;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.09);
+    cursor: pointer;
 }
 
 h3{
